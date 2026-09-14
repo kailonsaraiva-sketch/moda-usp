@@ -3,13 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato | MODA USP</title>
-    <meta name="description" content="Entre em contato com a MODA USP. Faça parte da organização estudantil de fashion business da USP-RP.">
+    <title>Banco de Talentos | MODA USP</title>
+    <meta name="description" content="Faça parte do Banco de Talentos da MODA USP. Cadastre-se e participe de projetos, eventos e oportunidades no universo do fashion business.">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos específicos para o formulário incorporado */
+        .form-wrapper {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+        
+        .form-container {
+            background: #FFFFFF;
+            border: 1px solid var(--black);
+            padding: 0;
+            margin-top: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .form-container iframe {
+            width: 100%;
+            min-height: 1740px;
+            border: none;
+            display: block;
+            background: #fff;
+        }
+        
+        .form-intro {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 80px 40px 0;
+        }
+        
+        .form-intro h2 {
+            font-family: var(--serif);
+            font-size: clamp(2rem, 3.5vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 30px;
+            letter-spacing: -1px;
+            line-height: 1.1;
+        }
+        
+        .form-intro p {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            color: #444;
+            margin-bottom: 20px;
+        }
+        
+        .form-meta {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 1px solid #ddd;
+        }
+        
+        .meta-item span {
+            display: block;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--gray);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .meta-item strong {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .form-wrapper { padding: 40px 20px; }
+            .form-intro { padding: 60px 20px 0; }
+            .form-container iframe { min-height: 1800px; }
+        }
+    </style>
 </head>
 <body>
 
@@ -41,66 +118,47 @@
 <!-- HERO INTERNO -->
 <section class="page-hero">
     <div class="container">
-        <div class="label">Contato · Faça Parte</div>
-        <h1>Vamos <em>conversar</em> sobre o futuro da moda.</h1>
+        <div class="label">Banco de Talentos · Faça Parte</div>
+        <h1>Faça parte da <em>primeira</em> organização de moda da USP-RP.</h1>
     </div>
 </section>
 
-<!-- FORMULÁRIO -->
+<!-- INTRO + FORMULÁRIO INCORPORADO -->
 <section>
-    <div class="container">
-        <div class="contato-grid">
-            <form action="https://formspree.io/f/SEU_CODIGO" method="POST">
-                <div class="form-group">
-                    <label for="nome">Nome</label>
-                    <input type="text" id="nome" name="nome" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="assunto">Assunto</label>
-                    <select id="assunto" name="assunto" required>
-                        <option value="">Selecione uma opção</option>
-                        <option value="faca-parte">Quero fazer parte</option>
-                        <option value="economoda">Projeto Economoda</option>
-                        <option value="link-fashion">Projeto Link Fashion</option>
-                        <option value="parceria">Parceria</option>
-                        <option value="imprensa">Imprensa</option>
-                        <option value="outro">Outro</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="mensagem">Mensagem</label>
-                    <textarea id="mensagem" name="mensagem" required></textarea>
-                </div>
-                <button type="submit" class="btn-submit">Enviar mensagem →</button>
-            </form>
-            
-            <div class="info-side">
-                <h2>Conecte-se com a MODA USP.</h2>
-                <p>Seja para fazer parte da organização, participar dos projetos Economoda e Link Fashion, propor parcerias ou tirar dúvidas, estamos prontos para conversar. Responderemos em até 48 horas.</p>
-                
-                <div class="info-block">
-                    <span>E-mail</span>
-                    <strong><a href="mailto:modausp@gmail.com">modausp@gmail.com</a></strong>
-                </div>
-                <div class="info-block">
-                    <span>Redes Sociais</span>
-                    <strong><a href="https://instagram.com/modausp" target="_blank">@modausp</a></strong>
-                </div>
-                <div class="info-block">
-                    <span>Localização</span>
-                    <strong>FEARP-USP · Ribeirão Preto · São Paulo</strong>
-                </div>
-                <div class="info-block">
-                    <span>Horário de atendimento</span>
-                    <strong>Segunda a sexta · 9h às 18h</strong>
-                </div>
+    <div class="form-intro">
+        <div class="section-label">Banco de Talentos</div>
+        <h2>Cadastre-se e fique no nosso radar para futuras oportunidades.</h2>
+        <p>A MODA USP é um espaço interdisciplinar de experimentação, formação e inovação em moda. Nossos valores são <strong>inovação</strong>, <strong>sustentabilidade</strong>, <strong>colaboração</strong> e <strong>diversidade</strong>.</p>
+        <p>Preencha o formulário abaixo e faça parte da nossa rede de estudantes interessados no universo do fashion business.</p>
+        
+        <div class="form-meta">
+            <div class="meta-item">
+                <span>Projetos</span>
+                <strong>Economoda · Link Fashion</strong>
+            </div>
+            <div class="meta-item">
+                <span>Eventos</span>
+                <strong>Palestras · Workshops · Encontros</strong>
+            </div>
+            <div class="meta-item">
+                <span>Dúvidas?</span>
+                <strong><a href="mailto:modausp@gmail.com">modausp@gmail.com</a></strong>
             </div>
         </div>
     </div>
+    
+    <div class="form-wrapper">
+        <div class="form-container">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdW8tKE0zePhv4u-6fBoJS-g7e6kbTlvQSXEEme-LW_RaiQKg/viewform?embedded=true" width="640" height="1740" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+    <h2>Construa novas possibilidades para a moda.</h2>
+    <p>Participe de projetos, eventos e experiências que conectam conhecimento, criatividade e mercado.</p>
+    <a href="index.html" class="btn-minimal" style="font-size: 1rem; border-width: 2px;">Voltar ao início →</a>
 </section>
 
 <!-- FOOTER -->
