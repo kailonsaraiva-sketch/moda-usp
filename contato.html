@@ -8,114 +8,35 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Estilos específicos para o formulário incorporado */
-        .form-wrapper {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 60px 40px;
-        }
-        
-        .form-container {
-            background: #FFFFFF;
-            border: 1px solid var(--black);
-            padding: 0;
-            margin-top: 40px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .form-container iframe {
-            width: 100%;
-            min-height: 1740px;
-            border: none;
-            display: block;
-            background: #fff;
-        }
-        
-        .form-intro {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 80px 40px 0;
-        }
-        
-        .form-intro h2 {
-            font-family: var(--serif);
-            font-size: clamp(2rem, 3.5vw, 3rem);
-            font-weight: 700;
-            margin-bottom: 30px;
-            letter-spacing: -1px;
-            line-height: 1.1;
-        }
-        
-        .form-intro p {
-            font-size: 1.15rem;
-            line-height: 1.7;
-            color: #444;
-            margin-bottom: 20px;
-        }
-        
-        .form-meta {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-            padding-top: 40px;
-            border-top: 1px solid #ddd;
-        }
-        
-        .meta-item span {
-            display: block;
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--gray);
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
-        
-        .meta-item strong {
-            font-size: 1rem;
-            font-weight: 600;
-        }
-        
-        @media (max-width: 768px) {
-            .form-wrapper { padding: 40px 20px; }
-            .form-intro { padding: 60px 20px 0; }
-            .form-container iframe { min-height: 1800px; }
-        }
-    </style>
 </head>
 <body>
 
 <header>
-    <a href="index.html" class="logo">MODA USP.</a>
+    <a href="index.html" class="logo">Moda USP</a>
     <nav>
         <ul>
-            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="sobre.html">A Organização</a></li>
             <li><a href="projetos.html">Projetos</a></li>
             <li><a href="eventos.html">Eventos</a></li>
             <li><a href="conteudos.html">Conteúdos</a></li>
             <li><a href="contato.html">Contato</a></li>
         </ul>
     </nav>
-    <button class="menu-toggle" aria-label="Menu">
-        <span></span><span></span><span></span>
-    </button>
+    <a href="contato.html" class="dz-club">Banco de Talentos</a>
+    <button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
 </header>
 
 <div class="mobile-menu">
     <a href="index.html">Início</a>
-    <a href="sobre.html">Sobre</a>
+    <a href="sobre.html">A Organização</a>
     <a href="projetos.html">Projetos</a>
     <a href="eventos.html">Eventos</a>
     <a href="conteudos.html">Conteúdos</a>
-    <a href="contato.html">Contato</a>
+    <a href="contato.html">Banco de Talentos</a>
 </div>
 
-<!-- HERO INTERNO -->
 <section class="page-hero">
     <div class="container">
         <div class="label">Banco de Talentos · Faça Parte</div>
@@ -123,45 +44,66 @@
     </div>
 </section>
 
-<!-- INTRO + FORMULÁRIO INCORPORADO -->
 <section>
-    <div class="form-intro">
-        <div class="section-label">Banco de Talentos</div>
-        <h2>Cadastre-se e fique no nosso radar para futuras oportunidades.</h2>
-        <p>A MODA USP é um espaço interdisciplinar de experimentação, formação e inovação em moda. Nossos valores são <strong>inovação</strong>, <strong>sustentabilidade</strong>, <strong>colaboração</strong> e <strong>diversidade</strong>.</p>
-        <p>Preencha o formulário abaixo e faça parte da nossa rede de estudantes interessados no universo do fashion business.</p>
-        
-        <div class="form-meta">
-            <div class="meta-item">
-                <span>Projetos</span>
-                <strong>Economoda · Link Fashion</strong>
+    <div class="container">
+        <div class="sobre-grid">
+            <div class="sobre-text">
+                <div class="section-label">Por que fazer parte</div>
+                <h2>Cadastre-se e fique no nosso radar para futuras oportunidades.</h2>
+                <p>A MODA USP é um espaço interdisciplinar de experimentação, formação e inovação em moda. Nossos valores são <strong>inovação</strong>, <strong>sustentabilidade</strong>, <strong>colaboração</strong> e <strong>diversidade</strong>.</p>
+                <p>Preencha o formulário ao lado e faça parte da nossa rede de estudantes interessados no universo do fashion business.</p>
             </div>
-            <div class="meta-item">
-                <span>Eventos</span>
-                <strong>Palestras · Workshops · Encontros</strong>
+            <div class="sobre-img">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=80" alt="Banco de talentos" loading="lazy">
             </div>
-            <div class="meta-item">
-                <span>Dúvidas?</span>
-                <strong><a href="mailto:modausp@gmail.com">modausp@gmail.com</a></strong>
-            </div>
-        </div>
-    </div>
-    
-    <div class="form-wrapper">
-        <div class="form-container">
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdW8tKE0zePhv4u-6fBoJS-g7e6kbTlvQSXEEme-LW_RaiQKg/viewform?embedded=true" width="640" height="1740" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
         </div>
     </div>
 </section>
 
-<!-- CTA -->
+<section>
+    <div class="container">
+        <div class="contato-grid">
+            <div class="form-container">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdW8tKE0zePhv4u-6fBoJS-g7e6kbTlvQSXEEme-LW_RaiQKg/viewform?embedded=true" width="640" height="1740" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+            </div>
+            <div class="info-side">
+                <h2>O que você ganha ao fazer parte</h2>
+                <p>Ao se cadastrar no nosso Banco de Talentos, você passa a fazer parte da nossa rede de estudantes interessados em moda e fashion business.</p>
+                <div class="info-block">
+                    <span>Projetos</span>
+                    <strong>Participe de iniciativas como Economoda e Link Fashion</strong>
+                </div>
+                <div class="info-block">
+                    <span>Eventos</span>
+                    <strong>Receba convites para palestras, workshops e encontros</strong>
+                </div>
+                <div class="info-block">
+                    <span>Networking</span>
+                    <strong>Conecte-se com estudantes, profissionais e empresas do setor</strong>
+                </div>
+                <div class="info-block">
+                    <span>Formação</span>
+                    <strong>Desenvolva competências para atuar no ecossistema da moda</strong>
+                </div>
+                <div class="info-block">
+                    <span>Dúvidas?</span>
+                    <strong><a href="mailto:modausp@gmail.com">modausp@gmail.com</a></strong>
+                </div>
+                <div class="info-block">
+                    <span>Localização</span>
+                    <strong>FEARP-USP · Ribeirão Preto · São Paulo</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="cta">
     <h2>Construa novas possibilidades para a moda.</h2>
     <p>Participe de projetos, eventos e experiências que conectam conhecimento, criatividade e mercado.</p>
-    <a href="index.html" class="btn-minimal" style="font-size: 1rem; border-width: 2px;">Voltar ao início →</a>
+    <a href="index.html" class="btn-minimal" style="color: #fff;">Voltar ao início →</a>
 </section>
 
-<!-- FOOTER -->
 <footer>
     <div class="container">
         <div class="footer-grid">
@@ -194,7 +136,7 @@
             <div class="footer-col">
                 <h4><a href="contato.html">Contato</a></h4>
                 <ul>
-                    <li><a href="contato.html">Faça Parte</a></li>
+                    <li><a href="contato.html">Banco de Talentos</a></li>
                     <li><a href="mailto:modausp@gmail.com">modausp@gmail.com</a></li>
                 </ul>
             </div>
