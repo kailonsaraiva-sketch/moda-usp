@@ -11,184 +11,84 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* ============================================
-           ESTILO MAGAZINE (pegada Dazed Digital)
-           ============================================ */
-        :root {
-            --dz-sans: 'Inter', -apple-system, Helvetica, sans-serif;
-        }
-
-        /* HEADER estilo Dazed: logo + nav + destaque boxed */
-        .dz-header {
-            position: fixed;
-            top: 0; left: 0; width: 100%;
-            z-index: 1000;
-            background: #fff;
-            border-bottom: 1px solid #000;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 40px;
-            height: 64px;
-        }
-        .dz-logo {
-            font-family: var(--dz-sans);
-            font-weight: 900;
-            font-size: 1.4rem;
-            letter-spacing: -0.05em;
-            text-transform: uppercase;
-        }
-        .dz-nav {
-            display: flex;
-            gap: 28px;
-            list-style: none;
-        }
-        .dz-nav a {
-            font-size: 0.78rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-        }
-        .dz-nav a:hover { text-decoration: underline; opacity: 1; }
-        .dz-club {
-            border: 1px solid #000;
-            padding: 8px 16px;
-            font-size: 0.72rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            transition: all 0.25s ease;
-        }
-        .dz-club:hover { background: #000; color: #fff; opacity: 1; }
-
-        /* HERO: matéria de capa */
+        /* === Homepage magazine-only === */
         .dz-hero { padding-top: 64px; }
-        .dz-hero-img {
-            width: 100%;
-            height: 74vh;
-            min-height: 460px;
-            overflow: hidden;
-        }
-        .dz-hero-img img {
-            width: 100%; height: 100%;
-            object-fit: cover;
-            filter: grayscale(100%) contrast(1.1);
-        }
+        .dz-hero-img { width: 100%; height: 74vh; min-height: 460px; overflow: hidden; }
+        .dz-hero-img img { width: 100%; height: 100%; object-fit: cover; }
         .dz-hero-head {
-            max-width: 1400px;
-            margin: 0 auto;
+            max-width: 1400px; margin: 0 auto;
             padding: 44px 40px 56px;
             border-bottom: 1px solid #000;
         }
         .dz-kicker {
-            font-size: 0.68rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.2em;
-            color: #888;
-            margin-bottom: 18px;
+            font-size: 0.68rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.2em;
+            color: #888; margin-bottom: 18px;
         }
         .dz-title {
-            font-family: var(--dz-sans);
-            font-weight: 800;
-            letter-spacing: -0.035em;
+            font-weight: 800; letter-spacing: -0.035em;
             line-height: 1.02;
             font-size: clamp(2.2rem, 5vw, 4.3rem);
             max-width: 980px;
         }
         .dz-title a:hover { text-decoration: underline; opacity: 1; }
         .dz-standfirst {
-            margin-top: 22px;
-            max-width: 720px;
-            font-size: 1.15rem;
-            font-weight: 300;
-            line-height: 1.6;
-            color: #444;
+            margin-top: 22px; max-width: 720px;
+            font-size: 1.15rem; font-weight: 300;
+            line-height: 1.6; color: #444;
         }
-
-        /* NEWSLETTER (The Drop) */
         .dz-drop {
-            background: #000;
-            color: #fff;
-            text-align: center;
-            padding: 70px 24px;
+            background: #000; color: #fff;
+            text-align: center; padding: 70px 24px;
         }
         .dz-drop h2 {
-            font-weight: 800;
-            letter-spacing: -0.03em;
+            font-weight: 800; letter-spacing: -0.03em;
             font-size: clamp(1.6rem, 3.4vw, 2.6rem);
-            margin-bottom: 28px;
+            margin-bottom: 28px; text-transform: uppercase;
         }
         .dz-drop-form {
-            display: flex;
-            justify-content: center;
-            gap: 0;
-            max-width: 460px;
-            margin: 0 auto;
+            display: flex; justify-content: center; gap: 0;
+            max-width: 460px; margin: 0 auto;
             border-bottom: 1px solid #fff;
         }
         .dz-drop-form input {
-            flex: 1;
-            background: transparent;
-            border: none;
-            outline: none;
-            color: #fff;
-            font-family: var(--dz-sans);
-            font-size: 0.95rem;
+            flex: 1; background: transparent;
+            border: none; outline: none; color: #fff;
+            font-family: var(--sans); font-size: 0.95rem;
             padding: 12px 4px;
         }
         .dz-drop-form input::placeholder { color: #777; }
         .dz-drop-form button {
-            background: transparent;
-            border: none;
-            color: #fff;
-            font-family: var(--dz-sans);
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            cursor: pointer;
-            padding: 0 8px;
+            background: transparent; border: none; color: #fff;
+            font-family: var(--sans); font-size: 0.75rem;
+            font-weight: 700; letter-spacing: 0.15em;
+            text-transform: uppercase; cursor: pointer; padding: 0 8px;
         }
         .dz-drop-form button:hover { text-decoration: underline; }
-        .dz-drop p {
-            margin-top: 16px;
-            font-size: 0.85rem;
-            color: #999;
-        }
-        .dz-drop-ok { display: none; font-size: 1rem; font-weight: 600; }
+        .dz-drop p { margin-top: 16px; font-size: 0.85rem; color: #999; }
 
-        /* SEÇÕES */
         .dz-section {
-            max-width: 1400px;
-            margin: 0 auto;
+            max-width: 1400px; margin: 0 auto;
             padding: 72px 40px;
         }
         .dz-section-head {
-            display: flex;
-            justify-content: space-between;
+            display: flex; justify-content: space-between;
             align-items: baseline;
             border-top: 2px solid #000;
-            padding-top: 14px;
-            margin-bottom: 40px;
+            padding-top: 14px; margin-bottom: 40px;
         }
         .dz-section-head h2 {
-            font-weight: 800;
-            font-size: 1.5rem;
-            letter-spacing: -0.02em;
-            text-transform: uppercase;
+            font-weight: 800; font-size: 1.5rem;
+            letter-spacing: -0.02em; text-transform: uppercase;
         }
+        .dz-section-head h2 a:hover { text-decoration: underline; opacity: 1; }
         .dz-more {
-            font-size: 0.72rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            border-bottom: 1px solid #000;
-            padding-bottom: 3px;
+            font-size: 0.72rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.12em;
+            border-bottom: 1px solid #000; padding-bottom: 3px;
         }
         .dz-more:hover { background: #000; color: #fff; opacity: 1; }
 
-        /* GRADE DE CARDS (Latest / categorias) */
         .dz-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -198,117 +98,80 @@
         .dz-card { display: block; }
         .dz-thumb {
             aspect-ratio: 4 / 3;
-            overflow: hidden;
-            margin-bottom: 14px;
+            overflow: hidden; margin-bottom: 14px;
             background: #eee;
         }
         .dz-thumb img {
-            width: 100%; height: 100%;
-            object-fit: cover;
-            filter: grayscale(100%) contrast(1.1);
             transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .dz-card:hover .dz-thumb img { transform: scale(1.05); }
         .dz-cat {
-            font-size: 0.62rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.18em;
-            color: #888;
-            margin-bottom: 8px;
+            font-size: 0.62rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.18em;
+            color: #888; margin-bottom: 8px;
         }
         .dz-card h3 {
-            font-size: 1.05rem;
-            font-weight: 600;
-            line-height: 1.32;
-            letter-spacing: -0.01em;
+            font-size: 1.05rem; font-weight: 600;
+            line-height: 1.32; letter-spacing: -0.01em;
         }
-        .dz-card:hover h3 { text-decoration: underline; }
+        .dz-card:hover h3 { text-decoration: underline; opacity: 1; }
 
-        /* CARROSSEL (Dazed League style) */
-        .dz-strip {
-            background: #000;
-            color: #fff;
-            padding: 72px 0;
-        }
-        .dz-strip-inner {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 40px;
-        }
+        /* Carrossel (Dazed League) */
+        .dz-strip { background: #000; color: #fff; padding: 72px 0; }
+        .dz-strip-inner { max-width: 1400px; margin: 0 auto; padding: 0 40px; }
         .dz-strip-head {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 36px;
-            gap: 20px;
-            flex-wrap: wrap;
+            display: flex; justify-content: space-between;
+            align-items: center; margin-bottom: 36px;
+            gap: 20px; flex-wrap: wrap;
         }
         .dz-strip-head h2 {
-            font-weight: 800;
-            font-size: 1.5rem;
-            letter-spacing: -0.02em;
-            text-transform: uppercase;
+            font-weight: 800; font-size: 1.5rem;
+            letter-spacing: -0.02em; text-transform: uppercase;
         }
         .dz-strip-head span {
-            font-size: 0.7rem;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: #888;
+            font-size: 0.7rem; letter-spacing: 0.15em;
+            text-transform: uppercase; color: #888; display: block;
+            margin-top: 4px;
         }
         .dz-arrows { display: flex; gap: 10px; }
         .dz-arrows button {
             width: 44px; height: 44px;
-            background: transparent;
-            border: 1px solid #fff;
-            color: #fff;
-            font-size: 1rem;
-            cursor: pointer;
+            background: transparent; border: 1px solid #fff;
+            color: #fff; font-size: 1rem; cursor: pointer;
             transition: all 0.25s ease;
         }
         .dz-arrows button:hover { background: #fff; color: #000; }
         .dz-track {
-            display: flex;
-            gap: 24px;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            scrollbar-width: none;
-            padding-bottom: 8px;
+            display: flex; gap: 24px;
+            overflow-x: auto; scroll-snap-type: x mandatory;
+            scrollbar-width: none; padding-bottom: 8px;
         }
         .dz-track::-webkit-scrollbar { display: none; }
         .dz-track .dz-card { min-width: 300px; scroll-snap-align: start; }
         .dz-track .dz-card h3 { color: #fff; }
         .dz-strip-cta {
-            display: inline-block;
-            margin-top: 36px;
-            border: 1px solid #fff;
-            padding: 14px 28px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
+            display: inline-block; margin-top: 36px;
+            border: 1px solid #fff; padding: 14px 28px;
+            font-size: 0.75rem; font-weight: 700;
+            letter-spacing: 0.15em; text-transform: uppercase;
         }
         .dz-strip-cta:hover { background: #fff; color: #000; opacity: 1; }
 
-        /* A ORGANIZAÇÃO (The Magazine style) */
+        /* A Organização (The Magazine style) */
         .dz-mag {
             display: grid;
             grid-template-columns: 1fr 2fr;
-            gap: 56px;
-            align-items: start;
+            gap: 56px; align-items: start;
         }
         .dz-mag-side h2 {
             font-weight: 800;
             font-size: clamp(1.8rem, 3vw, 2.6rem);
-            letter-spacing: -0.03em;
-            line-height: 1.05;
-            margin-bottom: 20px;
+            letter-spacing: -0.03em; line-height: 1.05;
+            margin-bottom: 20px; text-transform: uppercase;
         }
         .dz-mag-side p {
-            font-size: 1rem;
-            line-height: 1.6;
-            color: #444;
-            margin-bottom: 28px;
+            font-size: 1rem; line-height: 1.6;
+            color: #444; margin-bottom: 28px;
         }
         .dz-mag-grid {
             display: grid;
@@ -316,7 +179,7 @@
             gap: 32px 24px;
         }
 
-        /* EM ALTA (Trending — lista numerada) */
+        /* Em Alta (Trending) */
         .dz-trending ol { list-style: none; counter-reset: trend; }
         .dz-trending li {
             counter-increment: trend;
@@ -324,45 +187,34 @@
         }
         .dz-trending li:last-child { border-bottom: 1px solid #000; }
         .dz-trending a {
-            display: flex;
-            align-items: baseline;
-            gap: 28px;
-            padding: 22px 8px;
+            display: flex; align-items: baseline;
+            gap: 28px; padding: 22px 8px;
             transition: background 0.2s ease;
         }
         .dz-trending a:hover { background: #f5f5f5; opacity: 1; }
         .dz-trending a::before {
             content: counter(trend, decimal-leading-zero);
-            font-weight: 800;
-            font-size: 1.1rem;
-            letter-spacing: -0.02em;
-            color: #bbb;
+            font-weight: 800; font-size: 1.1rem;
+            letter-spacing: -0.02em; color: #bbb;
             min-width: 40px;
         }
         .dz-trending .t-title {
-            font-weight: 600;
-            font-size: 1.1rem;
-            letter-spacing: -0.01em;
-            flex: 1;
+            font-weight: 600; font-size: 1.1rem;
+            letter-spacing: -0.01em; flex: 1;
         }
         .dz-trending a:hover .t-title { text-decoration: underline; }
         .dz-trending .t-cat {
-            font-size: 0.62rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.18em;
+            font-size: 0.62rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.18em;
             color: #888;
         }
 
-        /* RESPONSIVO */
         @media (max-width: 1024px) {
             .dz-grid { grid-template-columns: repeat(2, 1fr); }
             .dz-mag { grid-template-columns: 1fr; gap: 40px; }
             .dz-mag-grid { grid-template-columns: repeat(2, 1fr); }
-            .dz-nav { display: none; }
         }
         @media (max-width: 640px) {
-            .dz-header { padding: 0 20px; }
             .dz-grid, .dz-grid.cols-3, .dz-mag-grid { grid-template-columns: 1fr; }
             .dz-section { padding: 56px 20px; }
             .dz-hero-head { padding: 32px 20px 40px; }
@@ -375,7 +227,7 @@
 </head>
 <body>
 
-<!-- HEADER estilo Dazed -->
+<!-- HEADER -->
 <header class="dz-header">
     <a href="index.html" class="dz-logo">Moda USP</a>
     <nav>
@@ -402,7 +254,7 @@
     <a href="contato.html">Banco de Talentos</a>
 </div>
 
-<!-- CAPA (hero editorial) -->
+<!-- CAPA -->
 <section class="dz-hero">
     <div class="dz-hero-img">
         <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1920&q=80" alt="Economoda — economia circular na moda">
@@ -421,7 +273,6 @@
         <input type="email" placeholder="Seu e-mail" required>
         <button type="submit">Assinar</button>
     </form>
-    <p class="dz-drop-ok" id="drop-ok">Obrigado! Você está na lista. ✓</p>
     <p>Histórias imperdíveis direto na sua caixa de entrada, toda semana.</p>
 </section>
 
@@ -440,7 +291,7 @@
         <a href="eventos.html" class="dz-card">
             <div class="dz-thumb"><img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80" alt="Evento" loading="lazy"></div>
             <div class="dz-cat">Eventos</div>
-            <h3>Fashion Business em Debate: o encontro que vai discutir a indústria — em breve, na FEARP-USP</h3>
+            <h3>Fashion Business em Debate: em breve, na FEARP-USP</h3>
         </a>
         <a href="conteudos.html" class="dz-card">
             <div class="dz-thumb"><img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80" alt="Mercado" loading="lazy"></div>
@@ -465,17 +316,17 @@
         <a href="contato.html" class="dz-card">
             <div class="dz-thumb"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="Banco de talentos" loading="lazy"></div>
             <div class="dz-cat">Banco de Talentos</div>
-            <h3>Inscrições abertas: entre para o radar de oportunidades da MODA USP</h3>
+            <h3>Inscrições abertas: entre para o radar de oportunidades</h3>
         </a>
         <a href="sobre.html" class="dz-card">
             <div class="dz-thumb"><img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=800&q=80" alt="Valores" loading="lazy"></div>
             <div class="dz-cat">Valores</div>
-            <h3>Inovação, sustentabilidade, colaboração e diversidade: o que nos guia</h3>
+            <h3>Inovação, sustentabilidade, colaboração e diversidade</h3>
         </a>
     </div>
 </section>
 
-<!-- CARROSSEL ECONOMODA (Dazed League style) -->
+<!-- CARROSSEL ECONOMODA -->
 <section class="dz-strip">
     <div class="dz-strip-inner">
         <div class="dz-strip-head">
@@ -514,7 +365,7 @@
     </div>
 </section>
 
-<!-- A ORGANIZAÇÃO (The Magazine style) -->
+<!-- A ORGANIZAÇÃO -->
 <section class="dz-section">
     <div class="dz-mag">
         <div class="dz-mag-side">
@@ -633,7 +484,7 @@
     </div>
 </section>
 
-<!-- EM ALTA (Trending) -->
+<!-- EM ALTA -->
 <section class="dz-section dz-trending" style="padding-top: 0;">
     <div class="dz-section-head">
         <h2>Em Alta</h2>
@@ -647,7 +498,7 @@
     </ol>
 </section>
 
-<!-- NEWSLETTER (repete, como na Dazed) -->
+<!-- NEWSLETTER FINAL -->
 <section class="dz-drop">
     <h2>Fuja do algoritmo! Receba O Drop da MODA USP</h2>
     <form class="dz-drop-form" id="drop-form-2">
@@ -704,7 +555,6 @@
 
 <script src="script.js"></script>
 <script>
-    // Carrossel (Prev/Next) — estilo Dazed League
     const track = document.getElementById('strip-track');
     document.getElementById('strip-prev').addEventListener('click', () => {
         track.scrollBy({ left: -340, behavior: 'smooth' });
@@ -712,14 +562,10 @@
     document.getElementById('strip-next').addEventListener('click', () => {
         track.scrollBy({ left: 340, behavior: 'smooth' });
     });
-
-    // Newsletter (feedback visual)
     document.querySelectorAll('.dz-drop-form').forEach(form => {
         form.addEventListener('submit', e => {
             e.preventDefault();
-            form.style.display = 'none';
-            const ok = form.parentElement.querySelector('.dz-drop-ok');
-            if (ok) ok.style.display = 'block';
+            form.innerHTML = '<p style="font-size:1.1rem;font-weight:600;">Obrigado! Você está na lista. ✓</p>';
         });
     });
 </script>
