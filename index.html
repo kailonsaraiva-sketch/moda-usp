@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MODA USP | Fashion Business — USP Ribeirão Preto</title>
+    <meta name="description" content="Primeira organização estudantil da USP-RP dedicada ao fashion business. Projetos, membros, conteúdos e banco de talentos.">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .dz-hero { padding-top: 64px; }
+        .dz-hero-img { width: 100%; height: 74vh; min-height: 460px; overflow: hidden; }
+        .dz-hero-head {
+            max-width: 1400px; margin: 0 auto;
+            padding: 44px 40px 56px;
+            border-bottom: 1px solid #000;
+        }
+        .dz-kicker {
+            font-size: 0.68rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.2em;
+            color: #888; margin-bottom: 18px;
+        }
+        .dz-title {
+            font-weight: 800; letter-spacing: -0.035em;
+            line-height: 1.02;
+            font-size: clamp(2.2rem, 5vw, 4.3rem);
+            max-width: 980px;
+        }
+        .dz-title a:hover { text-decoration: underline; opacity: 1; }
+        .dz-standfirst {
+            margin-top: 22px; max-width: 720px;
+            font-size: 1.15rem; font-weight: 300;
+            line-height: 1.6; color: #444;
+        }
+        .dz-drop { background: #000; color: #fff; text-align: center; padding: 70px 24px; }
+        .dz-drop h2 {
+            font-weight: 800; letter-spacing: -0.03em;
+            font-size: clamp(1.6rem, 3.4vw, 2.6rem);
+            margin-bottom: 28px; text-transform: uppercase;
+        }
+        .dz-drop-form {
+            display: flex; justify-content: center;
+            max-width: 460px; margin: 0 auto;
+            border-bottom: 1px solid #fff;
+        }
+        .dz-drop-form input {
+            flex: 1; background: transparent;
+            border: none; outline: none; color: #fff;
+            font-family: var(--sans); font-size: 0.95rem;
+            padding: 12px 4px;
+        }
+        .dz-drop-form input::placeholder { color: #777; }
+        .dz-drop-form button {
+            background: transparent; border: none; color: #fff;
+            font-size: 0.75rem; font-weight: 700;
+            letter-spacing: 0.15em; text-transform: uppercase;
+            cursor: pointer; padding: 0 8px;
+        }
+        .dz-drop-form button:hover { text-decoration: underline; }
+        .dz-drop p { margin-top: 16px; font-size: 0.85rem; color: #999; }
+        .dz-section { max-width: 1400px; margin: 0 auto; padding: 72px 40px; }
+        .dz-section-head {
+            display: flex; justify-content: space-between;
+            align-items: baseline;
+            border-top: 2px solid #000;
+            padding-top: 14px; margin-bottom: 40px;
+            gap: 20px; flex-wrap: wrap;
+        }
+        .dz-section-head h2 {
+            font-weight: 800; font-size: 1.5rem;
+            letter-spacing: -0.02em; text-transform: uppercase;
+            display: flex; align-items: center; gap: 14px;
+        }
+        .dz-more {
+            font-size: 0.72rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.12em;
+            border-bottom: 1px solid #000; padding-bottom: 3px;
+        }
+        .dz-more:hover { background: #000; color: #fff; opacity: 1; }
+        .dz-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 36px 28px;
+        }
+        .dz-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+        .dz-card { display: block; }
+        .dz-thumb {
+            aspect-ratio: 4 / 3;
+            overflow: hidden; margin-bottom: 14px;
+            background: #eee;
+        }
+        .dz-thumb img { transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1); }
+        .dz-card:hover .dz-thumb img { transform: scale(1.05); }
+        .dz-cat {
+            font-size: 0.62rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.18em;
+            color: #888; margin-bottom: 8px;
+        }
+        .dz-card h3 {
+            font-size: 1.05rem; font-weight: 600;
+            line-height: 1.32; letter-spacing: -0.01em;
+        }
+        .dz-card:hover h3 { text-decoration: underline; opacity: 1; }
+        .dz-strip { background: #000; color: #fff; padding: 72px 0; }
+        .dz-strip-inner { max-width: 1400px; margin: 0 auto; padding: 0 40px; }
+        .dz-strip-head {
+            display: flex; justify-content: space-between;
+            align-items: center; margin-bottom: 36px;
+            gap: 20px; flex-wrap: wrap;
+        }
+        .dz-strip-head h2 {
+            font-weight: 800; font-size: 1.5rem;
+            letter-spacing: -0.02em; text-transform: uppercase;
+        }
+        .dz-strip-head span {
+            font-size: 0.7rem; letter-spacing: 0.15em;
+            text-transform: uppercase; color: #888;
+        }
+        .dz-arrows { display: flex; gap: 10px; }
+        .dz-arrows button {
+            width: 44px; height: 44px;
+            background: transparent; border: 1px solid #fff;
+            color: #fff; font-size: 1rem; cursor: pointer;
+        }
+        .dz-arrows button:hover { background: #fff; color: #000; }
+        .dz-track {
+            display: flex; gap: 24px;
+            overflow-x: auto; scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+        }
+        .dz-track::-webkit-scrollbar { display: none; }
+        .dz-track .dz-card { min-width: 300px; scroll-snap-align: start; }
+        .dz-track .dz-card h3 { color: #fff; }
+        .dz-strip-cta {
+            display: inline-block; margin-top: 36px;
+            border: 1px solid #fff; padding: 14px 28px;
+            font-size: 0.75rem; font-weight: 700;
+            letter-spacing: 0.15em; text-transform: uppercase;
+        }
+        .dz-strip-cta:hover { background: #fff; color: #000; opacity: 1; }
+        .dz-mag { display: grid; grid-template-columns: 1fr 2fr; gap: 56px; align-items: start; }
+        .dz-mag-side h2 {
+            font-weight: 800;
+            font-size: clamp(1.8rem, 3vw, 2.6rem);
+            letter-spacing: -0.03em; line-height: 1.05;
+            margin-bottom: 20px; text-transform: uppercase;
+        }
+        .dz-mag-side p { font-size: 1rem; line-height: 1.6; color: #444; margin-bottom: 28px; }
+        .dz-mag-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px 24px; }
+        .dz-trending ol { list-style: none; counter-reset: trend; }
+        .dz-trending li { counter-increment: trend; border-top: 1px solid #000; }
+        .dz-trending li:last-child { border-bottom: 1px solid #000; }
+        .dz-trending a {
+            display: flex; align-items: baseline;
+            gap: 28px; padding: 22px 8px;
+        }
+        .dz-trending a:hover { background: #f5f5f5; opacity: 1; }
+        .dz-trending a::before {
+            content: counter(trend, decimal-leading-zero);
+            font-weight: 800; font-size: 1.1rem;
+            color: #bbb; min-width: 40px;
+        }
+        .dz-trending .t-title { font-weight: 600; font-size: 1.1rem; flex: 1; }
+        .dz-trending a:hover .t-title { text-decoration: underline; }
+        .dz-trending .t-cat {
+            font-size: 0.62rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.18em;
+            color: #888;
+        }
+        .insta-handle { font-size: 0.72rem; font-weight: 500; color: #888; }
+        .insta-handle a {
+            color: #000; font-weight: 700;
+            border-bottom: 1px solid #000; padding-bottom: 2px;
+        }
+        .insta-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .insta-grid .instagram-media {
+            margin: 0 !important; min-width: 0 !important;
+            max-width: 100% !important; width: 100% !important;
+            filter: grayscale(100%) contrast(1.1);
+            transition: filter 0.6s ease, transform 0.4s ease;
+        }
+        .insta-grid .instagram-media:hover {
+            filter: grayscale(0%) contrast(1);
+            transform: translateY(-4px);
+        }
+        .insta-footer { margin-top: 40px; display: flex; justify-content: center; }
+        .insta-footer a {
+            display: inline-flex; align-items: center;
+            gap: 10px; padding: 14px 32px;
+            border: 1px solid #000;
+            font-size: 0.75rem; font-weight: 700;
+            letter-spacing: 0.15em; text-transform: uppercase;
+        }
+        .insta-footer a:hover { background: #000; color: #fff; opacity: 1; }
+        @media (max-width: 1024px) {
+            .dz-grid { grid-template-columns: repeat(2, 1fr); }
+            .dz-mag { grid-template-columns: 1fr; gap: 40px; }
+            .dz-mag-grid { grid-template-columns: repeat(2, 1fr); }
+            .insta-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 640px) {
+            .dz-grid, .dz-grid.cols-3, .dz-mag-grid { grid-template-columns: 1fr; }
+            .insta-grid { grid-template-columns: 1fr; }
+            .dz-section { padding: 56px 20px; }
+            .dz-hero-head { padding: 32px 20px 40px; }
+            .dz-hero-img { height: 52vh; min-height: 320px; }
+            .dz-strip-inner { padding: 0 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="logo">Moda USP</a>
+    <nav>
+        <ul>
+            <li><a href="sobre.html">A Organização</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+            <li><a href="membros.html">Membros</a></li>
+            <li><a href="conteudos.html">Conteúdos</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+    <a href="contato.html" class="dz-club">Banco de Talentos</a>
+    <button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+</header>
+
+<div class="mobile-menu">
+    <a href="index.html">Início</a>
+    <a href="sobre.html">A Organização</a>
+    <a href="projetos.html">Projetos</a>
+    <a href="membros.html">Membros</a>
+    <a href="conteudos.html">Conteúdos</a>
+    <a href="contato.html">Banco de Talentos</a>
+</div>
+
+<!-- HERO -->
+<section class="dz-hero">
+    <div class="dz-hero-img">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1920&q=80" alt="Economoda">
+    </div>
+    <div class="dz-hero-head">
+        <div class="dz-kicker">Projeto em destaque · Economoda</div>
+        <h1 class="dz-title"><a href="projetos.html#economoda">Economoda conecta artesãos ao mercado e fortalece a economia circular na moda</a></h1>
+        <p class="dz-standfirst">Exclusivo: o projeto da MODA USP busca fortalecer competências técnicas e comerciais, além de incentivar práticas sustentáveis em toda a cadeia produtiva da moda em Ribeirão Preto.</p>
+    </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="dz-drop">
+    <h2>Fuja do algoritmo! Receba O Drop da MODA USP</h2>
+    <form class="dz-drop-form" onsubmit="event.preventDefault(); this.innerHTML='<p style=&quot;font-size:1.1rem;font-weight:600;&quot;>Obrigado! Você está na lista. ✓</p>';">
+        <input type="email" placeholder="Seu e-mail" required>
+        <button type="submit">Assinar</button>
+    </form>
+    <p>Histórias imperdíveis direto na sua caixa de entrada, toda semana.</p>
+</section>
+
+<!-- ÚLTIMAS (INSTAGRAM) -->
+<section class="dz-section">
+    <div class="dz-section-head">
+        <h2>Últimas <span class="insta-handle">· <a href="https://instagram.com/modausp" target="_blank">@modausp</a></span></h2>
+        <a href="https://instagram.com/modausp" target="_blank" class="dz-more">Seguir no Instagram →</a>
+    </div>
+    <div class="insta-grid">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DdjrROuiU-5/" data-instgrm-version="14"></blockquote>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DdZW-KKkWhH/" data-instgrm-version="14"></blockquote>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DdWjodzDi3D/" data-instgrm-version="14"></blockquote>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DdPmKE1DoZ0/" data-instgrm-version="14"></blockquote>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Dcwcc9GgV3-/" data-instgrm-version="14"></blockquote>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Db3wqMVCYrP/" data-instgrm-version="14"></blockquote>
+    </div>
+    <div class="insta-footer">
+        <a href="https://instagram.com/modausp" target="_blank">Ver tudo no Instagram →</a>
+    </div>
+</section>
+
+<!-- CARROSSEL ECONOMODA -->
+<section class="dz-strip">
+    <div class="dz-strip-inner">
+        <div class="dz-strip-head">
+            <div>
+                <h2>Economoda</h2>
+                <span>Em parceria com artesãos da região</span>
+            </div>
+            <div class="dz-arrows">
+                <button id="strip-prev" aria-label="Anterior">←</button>
+                <button id="strip-next" aria-label="Próximo">→</button>
+            </div>
+        </div>
+        <div class="dz-track" id="strip-track">
+            <a href="projetos.html#economoda" class="dz-card">
+                <div class="dz-thumb"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80" alt="" loading="lazy"></div>
+                <h3>O coração da economia circular em Ribeirão Preto</h3>
+            </a>
+            <a href="projetos.html#economoda" class="dz-card">
+                <div class="dz-thumb"><img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=600&q=80" alt="" loading="lazy"></div>
+                <h3>Dentro do ateliê dos artesãos parceiros</h3>
+            </a>
+            <a href="projetos.html#economoda" class="dz-card">
+                <div class="dz-thumb"><img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=600&q=80" alt="" loading="lazy"></div>
+                <h3>Uma breve história do upcycling na moda</h3>
+            </a>
+            <a href="projetos.html#economoda" class="dz-card">
+                <div class="dz-thumb"><img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=600&q=80" alt="" loading="lazy"></div>
+                <h3>Geração circular: repensar o jeito de vestir</h3>
+            </a>
+            <a href="projetos.html#economoda" class="dz-card">
+                <div class="dz-thumb"><img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=600&q=80" alt="" loading="lazy"></div>
+                <h3>Competências técnicas e comerciais fortalecidas</h3>
+            </a>
+        </div>
+        <a href="projetos.html#economoda" class="dz-strip-cta">Explorar o Economoda</a>
+    </div>
+</section>
+
+<!-- A ORGANIZAÇÃO -->
+<section class="dz-section">
+    <div class="dz-mag">
+        <div class="dz-mag-side">
+            <div class="dz-kicker">A Organização</div>
+            <h2>Formação, experimentação e inovação em moda desde 2024.</h2>
+            <p>Fundada em outubro de 2024 por José Araújo e Tayna Veneziano, com sede na FEARP-USP, a MODA USP é a primeira organização estudantil da USP-RP dedicada ao fashion business.</p>
+            <a href="contato.html" class="dz-more">Faça parte →</a>
+        </div>
+        <div class="dz-mag-grid">
+            <a href="sobre.html" class="dz-card">
+                <div class="dz-thumb"><img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=600&q=80" alt="" loading="lazy"></div>
+                <div class="dz-cat">Quem somos</div>
+                <h3>Preparar gestores para o ecossistema da moda</h3>
+            </a>
+            <a href="sobre.html" class="dz-card">
+                <div class="dz-thumb"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=600&q=80" alt="" loading="lazy"></div>
+                <div class="dz-cat">Nossa força</div>
+                <h3>Interdisciplinaridade: Administração, Moda, Direito, Química</h3>
+            </a>
+            <a href="membros.html" class="dz-card">
+                <div class="dz-thumb"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80" alt="" loading="lazy"></div>
+                <div class="dz-cat">Membros</div>
+                <h3>Conheça a equipe que constrói a MODA USP</h3>
+            </a>
+            <a href="projetos.html#economoda" class="dz-card">
+                <div class="dz-thumb"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80" alt="" loading="lazy"></div>
+                <div class="dz-cat">Projeto</div>
+                <h3>Economoda: economia circular e artesãos no mercado</h3>
+            </a>
+            <a href="projetos.html#link-fashion" class="dz-card">
+                <div class="dz-thumb"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80" alt="" loading="lazy"></div>
+                <div class="dz-cat">Projeto</div>
+                <h3>Link Fashion: laboratórios de branding e ESG</h3>
+            </a>
+            <a href="conteudos.html" class="dz-card">
+                <div class="dz-thumb"><img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=600&q=80" alt="" loading="lazy"></div>
+                <div class="dz-cat">Conteúdos</div>
+                <h3>Ideias, análises e histórias sobre a moda</h3>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- PROJETOS -->
+<section class="dz-section" style="padding-top: 0;">
+    <div class="dz-section-head">
+        <h2><a href="projetos.html">Projetos</a></h2>
+        <a href="projetos.html" class="dz-more">Mais projetos →</a>
+    </div>
+    <div class="dz-grid cols-3">
+        <a href="projetos.html#economoda" class="dz-card">
+            <div class="dz-thumb"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80" alt="" loading="lazy"></div>
+            <div class="dz-cat">Economia circular</div>
+            <h3>Economoda conecta artesãos ao mercado</h3>
+        </a>
+        <a href="projetos.html#link-fashion" class="dz-card">
+            <div class="dz-thumb"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" alt="" loading="lazy"></div>
+            <div class="dz-cat">Branding & ESG</div>
+            <h3>Link Fashion reúne laboratórios de construção de marcas</h3>
+        </a>
+        <a href="contato.html" class="dz-card">
+            <div class="dz-thumb"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="" loading="lazy"></div>
+            <div class="dz-cat">Participe</div>
+            <h3>Tem uma ideia de projeto? Construa com a MODA USP</h3>
+        </a>
+    </div>
+</section>
+
+<!-- MEMBROS -->
+<section class="dz-section" style="padding-top: 0;">
+    <div class="dz-section-head">
+        <h2><a href="membros.html">Membros</a></h2>
+        <a href="membros.html" class="dz-more">Conheça a equipe →</a>
+    </div>
+    <div class="dz-grid cols-3">
+        <a href="membros.html" class="dz-card">
+            <div class="dz-thumb"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="Presidência" loading="lazy"></div>
+            <div class="dz-cat">Presidência</div>
+            <h3>José Araújo e Tayna Veneziano lideram a MODA USP desde 2024</h3>
+        </a>
+        <a href="membros.html" class="dz-card">
+            <div class="dz-thumb"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=800&q=80" alt="Diretoria" loading="lazy"></div>
+            <div class="dz-cat">Diretoria</div>
+            <h3>Diretores e coordenadores lideram as áreas da organização</h3>
+        </a>
+        <a href="membros.html" class="dz-card">
+            <div class="dz-thumb"><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=800&q=80" alt="Trainees" loading="lazy"></div>
+            <div class="dz-cat">Trainees</div>
+            <h3>A nova geração que está aprendendo e construindo o futuro</h3>
+        </a>
+    </div>
+</section>
+
+<!-- CONTEÚDOS -->
+<section class="dz-section" style="padding-top: 0;">
+    <div class="dz-section-head">
+        <h2><a href="conteudos.html">Conteúdos</a></h2>
+        <a href="conteudos.html" class="dz-more">Mais conteúdos →</a>
+    </div>
+    <div class="dz-grid cols-3">
+        <a href="conteudos.html" class="dz-card">
+            <div class="dz-thumb"><img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80" alt="" loading="lazy"></div>
+            <div class="dz-cat">Mercado</div>
+            <h3>Novas perspectivas para o mercado da moda</h3>
+        </a>
+        <a href="conteudos.html" class="dz-card">
+            <div class="dz-thumb"><img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80" alt="" loading="lazy"></div>
+            <div class="dz-cat">Comportamento</div>
+            <h3>Moda, identidade e comportamento</h3>
+        </a>
+        <a href="conteudos.html" class="dz-card">
+            <div class="dz-thumb"><img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=800&q=80" alt="" loading="lazy"></div>
+            <div class="dz-cat">Entrevista</div>
+            <h3>Conversas com profissionais do setor</h3>
+        </a>
+    </div>
+</section>
+
+<!-- EM ALTA -->
+<section class="dz-section dz-trending" style="padding-top: 0;">
+    <div class="dz-section-head">
+        <h2>Em Alta</h2>
+    </div>
+    <ol>
+        <li><a href="projetos.html#economoda"><span class="t-title">Economoda: economia circular que conecta artesãos ao mercado</span><span class="t-cat">Projetos</span></a></li>
+        <li><a href="contato.html"><span class="t-title">Banco de Talentos: inscrições abertas</span><span class="t-cat">Faça parte</span></a></li>
+        <li><a href="projetos.html#link-fashion"><span class="t-title">Link Fashion e os laboratórios de branding e ESG</span><span class="t-cat">Projetos</span></a></li>
+        <li><a href="membros.html"><span class="t-title">Conheça a equipe que constrói a MODA USP</span><span class="t-cat">Membros</span></a></li>
+        <li><a href="sobre.html"><span class="t-title">Fundada em 2024: a história da primeira organização de moda da USP-RP</span><span class="t-cat">Institucional</span></a></li>
+    </ol>
+</section>
+
+<!-- NEWSLETTER FINAL -->
+<section class="dz-drop">
+    <h2>Fuja do algoritmo! Receba O Drop da MODA USP</h2>
+    <form class="dz-drop-form" onsubmit="event.preventDefault(); this.innerHTML='<p style=&quot;font-size:1.1rem;font-weight:600;&quot;>Obrigado! Você está na lista. ✓</p>';">
+        <input type="email" placeholder="Seu e-mail" required>
+        <button type="submit">Assinar</button>
+    </form>
+    <p>Histórias imperdíveis direto na sua caixa de entrada, toda semana.</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <h3>MODA USP.</h3>
+            <p>Formação, conexão e inovação para transformar o futuro da moda desde 2024.</p>
+            <div class="footer-social">
+                <a href="https://instagram.com/modausp" target="_blank">Instagram</a>
+                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h4><a href="sobre.html">Sobre</a></h4>
+            <ul>
+                <li><a href="sobre.html">A Organização</a></li>
+                <li><a href="sobre.html">Nossa História</a></li>
+                <li><a href="sobre.html">Valores</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4><a href="projetos.html">Projetos</a></h4>
+            <ul>
+                <li><a href="projetos.html#economoda">Economoda</a></li>
+                <li><a href="projetos.html#link-fashion">Link Fashion</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4><a href="membros.html">Membros</a></h4>
+            <ul>
+                <li><a href="membros.html">Presidência</a></li>
+                <li><a href="membros.html">Diretoria</a></li>
+                <li><a href="membros.html">Trainees</a></li>
+                <li><a href="membros.html">Conselho</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4><a href="contato.html">Contato</a></h4>
+            <ul>
+                <li><a href="contato.html">Banco de Talentos</a></li>
+                <li><a href="mailto:modausp@gmail.com">modausp@gmail.com</a></li>
+                <li><a href="conteudos.html">Conteúdos</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2024-2026 MODA USP. Todos os direitos reservados.</span>
+        <span>FEARP-USP · Ribeirão Preto · Universidade de São Paulo</span>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+<script async src="//www.instagram.com/embed.js"></script>
+<script>
+    const track = document.getElementById('strip-track');
+    document.getElementById('strip-prev').addEventListener('click', () => track.scrollBy({ left: -340, behavior: 'smooth' }));
+    document.getElementById('strip-next').addEventListener('click', () => track.scrollBy({ left: 340, behavior: 'smooth' }));
+</script>
+</body>
+</html>
