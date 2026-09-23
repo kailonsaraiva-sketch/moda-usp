@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membros | MODA USP</title>
+    <meta name="description" content="Conheça a equipe da MODA USP — presidência, diretores, coordenadores, trainees, conselho estratégico e ex-membros.">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .membros-section {
+            max-width: 1400px; margin: 0 auto;
+            padding: 72px 40px;
+            border-top: 2px solid #000;
+        }
+        .membros-section-head {
+            display: flex; justify-content: space-between;
+            align-items: baseline;
+            padding-top: 14px; margin-bottom: 40px;
+            gap: 20px; flex-wrap: wrap;
+        }
+        .membros-section-head h2 {
+            font-weight: 800; font-size: 1.5rem;
+            letter-spacing: -0.02em; text-transform: uppercase;
+        }
+        .membros-section-head span {
+            font-size: 0.72rem; font-weight: 500;
+            letter-spacing: 0.1em; color: #888;
+            text-transform: uppercase;
+        }
+        .membros-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px 28px;
+        }
+        .membro-card { display: block; transition: transform 0.3s ease; }
+        .membro-card:hover { transform: translateY(-4px); }
+        .membro-img {
+            aspect-ratio: 1 / 1;
+            overflow: hidden; margin-bottom: 16px;
+            background: #eee;
+        }
+        .membro-img img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            filter: grayscale(100%) contrast(1.1);
+            transition: filter 0.4s ease;
+        }
+        .membro-card:hover .membro-img img { filter: grayscale(0%) contrast(1); }
+        .membro-tag {
+            font-size: 0.62rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.18em;
+            color: #888; margin-bottom: 8px;
+        }
+        .membro-nome {
+            font-size: 1.2rem; font-weight: 700;
+            line-height: 1.25; letter-spacing: -0.01em;
+            margin-bottom: 6px;
+        }
+        .membro-cargo {
+            font-size: 0.9rem; font-weight: 600;
+            color: #000; margin-bottom: 10px;
+            text-transform: uppercase; letter-spacing: 0.05em;
+        }
+        .membro-funcao {
+            font-size: 0.88rem; color: #555;
+            line-height: 1.55;
+        }
+        .ex-membros-list {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            border-top: 1px solid #000;
+            border-left: 1px solid #000;
+        }
+        .ex-membro-card {
+            padding: 28px 24px;
+            border-right: 1px solid #000;
+            border-bottom: 1px solid #000;
+            background: #fff;
+            transition: all 0.3s ease;
+        }
+        .ex-membro-card:hover { background: #000; color: #fff; }
+        .ex-membro-card:hover .membro-cargo { color: #fff; }
+        .ex-membro-card .membro-nome { font-size: 1rem; margin-bottom: 4px; }
+        .ex-membro-card .membro-cargo { font-size: 0.78rem; color: #888; margin-bottom: 0; }
+        .ex-membro-card .membro-ano { font-size: 0.72rem; color: #888; margin-top: 4px; }
+        .ex-membro-card:hover .membro-ano { color: #aaa; }
+        @media (max-width: 1024px) {
+            .membros-grid { grid-template-columns: repeat(2, 1fr); }
+            .ex-membros-list { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 640px) {
+            .membros-grid, .ex-membros-list { grid-template-columns: 1fr; }
+            .membros-section { padding: 56px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="logo">Moda USP</a>
+    <nav>
+        <ul>
+            <li><a href="sobre.html">A Organização</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+            <li><a href="membros.html">Membros</a></li>
+            <li><a href="conteudos.html">Conteúdos</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+    <a href="contato.html" class="dz-club">Banco de Talentos</a>
+    <button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+</header>
+
+<div class="mobile-menu">
+    <a href="index.html">Início</a>
+    <a href="sobre.html">A Organização</a>
+    <a href="projetos.html">Projetos</a>
+    <a href="membros.html">Membros</a>
+    <a href="conteudos.html">Conteúdos</a>
+    <a href="contato.html">Banco de Talentos</a>
+</div>
+
+<section class="page-hero">
+    <div class="container">
+        <div class="label">Membros</div>
+        <h1>As pessoas que constroem a <em>MODA USP</em>.</h1>
+    </div>
+</section>
+
+<!-- PRESIDÊNCIA -->
+<section class="membros-section">
+    <div class="membros-section-head">
+        <h2>Presidência</h2>
+        <span>Liderança da organização</span>
+    </div>
+    <div class="membros-grid">
+        <div class="membro-card">
+            <div class="membro-img"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="José Araújo" loading="lazy"></div>
+            <div class="membro-tag">Presidente</div>
+            <div class="membro-nome">José Araújo</div>
+            <div class="membro-cargo">Presidente</div>
+            <div class="membro-funcao">Co-fundador da MODA USP. Lidera a estratégia geral e representa a entidade externamente. Graduando em Administração pela FEARP-USP.</div>
+        </div>
+        <div class="membro-card">
+            <div class="membro-img"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=600&q=80" alt="Tayna Veneziano" loading="lazy"></div>
+            <div class="membro-tag">Vice-Presidente</div>
+            <div class="membro-nome">Tayna Veneziano</div>
+            <div class="membro-cargo">Vice-Presidente</div>
+            <div class="membro-funcao">Co-fundadora da MODA USP. Coordena as áreas internas e apoia a presidência na gestão estratégica. Graduanda em Contabilidade pela FEARP-USP.</div>
+        </div>
+    </div>
+</section>
+
+<!-- DIRETORES E COORDENADORES -->
+<section class="membros-section">
+    <div class="membros-section-head">
+        <h2>Diretores e Coordenadores</h2>
+        <span>Liderança das áreas</span>
+    </div>
+    <div class="membros-grid">
+        <div class="membro-card">
+            <div class="membro-img"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=600&q=80" alt="" loading="lazy"></div>
+            <div class="membro-tag">Diretoria</div>
+            <div class="membro-nome">Nome do Diretor</div>
+            <div class="membro-cargo">Diretor de Projetos</div>
+            <div class="membro-funcao">Coordena o desenvolvimento e execução dos projetos Economoda e Link Fashion.</div>
+        </div>
+        <div class="membro-card">
+            <div class="membro-img"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=600&q=80" alt="" loading="lazy"></div>
+            <div class="membro-tag">Diretoria</div>
+            <div class="membro-nome">Nome da Diretora</div>
+            <div class="membro-cargo">Diretora de Marketing</div>
+            <div class="membro-funcao">Responsável pela comunicação, redes sociais e posicionamento da marca MODA USP.</div>
+        </div>
+        <div class="membro-card">
+            <div class="membro-img"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80" alt="" loading="lazy"></div>
+            <div class="membro-tag">Coordenação</div>
+            <div class="membro-nome">Nome do Coordenador</div>
+            <div class="membro-cargo">Coordenador de Eventos</div>
+            <div class="membro-funcao">Organiza e executa os eventos da MODA USP.</div>
+        </div>
+        <div class="membro-card">
+            <div class="membro-img"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="" loading="lazy"></div>
+            <div class="membro-tag">Coordenação</div>
+            <div class="membro-nome">Nome da Coordenadora</div>
+            <div class="membro-cargo">Coordenadora de Conteúdos</div>
+            <div class="membro-funcao">Produz e edita os conteúdos publicados no site e redes sociais.</div>
+        </div>
+        <div class="membro-card">
+            <div class="membro-img"><img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80" alt="" loading="lazy"></div>
+            <div class="membro-tag">Coordenação</div>
+            <div class="membro-nome">Nome da Coordenadora</div>
+            <div class="membro-cargo">Coordenadora de Pessoas</div>
+            <div class="membro-funcao">Cuida do processo seletivo, integração e desenvolvimento dos membros.</div>
+        </div>
+        <div class="membro-card">
+            <div class="membro-img"><img src="https://images.unsplash.com/photo-1463453091185-61582044d556?auto=format&fit=crop&w=600&q=80" alt="" loading="lazy"></div>
+            <div class="membro-tag">Coordenação</div>
+            <div class="membro-nome">Nome do Coordenador</div>
+            <div class="membro-cargo">Coordenador de Parcerias</div>
+            <div class="membro-funcao">Desenvolve e mantém parcerias com empresas e instituições do setor da moda.</div>
+        </div>
+    </div>
+</section>
+
+<!-- TRAINEES -->
+<section class="membros-section">
+    <div class="membros-section-head">
+        <h2>Trainees</h2>
+        <span>Nova geração</span>
+    </div>
+    <div class="membros-grid">
+        <div class="membro-card">
+            <div class="membro-img"><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80" alt="" loading="lazy"></div>
+            <div class="membro-tag">Trainee</div>
+            <div class="membro-nome">Nome do Trainee</div>
+            <div class="membro-cargo">Trainee de Projetos</div>
+            <div class="membro-funcao">Apoia a execução dos projetos e aprende sobre gestão de iniciativas no fashion business.</div>
+        </div>
+        <div class="membro-card">
+            <div class="membro-img"><img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=600&q=80" alt="" loading="lazy"></div>
+            <div class="membro-tag">Trainee</div>
+            <div class="membro-nome">Nome do Trainee</div>
+            <div class="membro-cargo">Trainee de Marketing</div>
+            <div class="membro-funcao">Auxilia na produção de conteúdo e gestão das redes sociais.</div>
+        </div>
+        <div class="membro-card">
+            <div class="membro-img"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=600&q=80" alt="" loading="lazy"></div>
+            <div class="membro-tag">Trainee</div>
+            <div class="membro-nome">Nome do Trainee</div>
+            <div class="membro-cargo">Trainee de Eventos</div>
+            <div class="membro-funcao">Participa da organização de eventos e desenvolve competências em produção executiva.</div>
+        </div>
+        <div class="membro-card">
+            <div class="membro-img"><img src="https://images.unsplash.com/photo-1506794783220-2b2ea3e0d4e2?auto=format&fit=crop&w=600&q=80" alt="" loading="lazy"></div>
+            <div class="membro-tag">Trainee</div>
+            <div class="membro-nome">Nome do Trainee</div>
+            <div class="membro-cargo">Trainee de Conteúdos</div>
+            <div class="membro-funcao">Auxilia na pesquisa e produção de análises, entrevistas e matérias.</div>
+        </div>
+    </div>
+</section>
+
+<!-- CONSELHO ESTRATÉGICO -->
+<section class="membros-section">
+    <div class="membros-section-head">
+        <h2>Conselho Estratégico</h2>
+        <span>Orientação e mentoria</span>
+    </div>
+    <div class="membros-grid">
+        <div class="membro-card">
+            <div class="membro-img"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80" alt="" loading="lazy"></div>
+            <div class="membro-tag">Conselho</div>
+            <div class="membro-nome">Nome do Conselheiro</div>
+            <div class="membro-cargo">Conselheiro Estratégico</div>
+            <div class="membro-funcao">Profissional do mercado de moda que oferece mentoria e orientação estratégica.</div>
+        </div>
+        <div class="membro-card">
+            <div class="membro-img"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="" loading="lazy"></div>
+            <div class="membro-tag">Conselho</div>
+            <div class="membro-nome">Nome da Conselheira</div>
+            <div class="membro-cargo">Conselheira Estratégica</div>
+            <div class="membro-funcao">Acadêmica e profissional que apoia decisões de longo prazo e parcerias institucionais.</div>
+        </div>
+        <div class="membro-card">
+            <div class="membro-img"><img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80" alt="" loading="lazy"></div>
+            <div class="membro-tag">Conselho</div>
+            <div class="membro-nome">Nome do Conselheiro</div>
+            <div class="membro-cargo">Conselheiro Estratégico</div>
+            <div class="membro-funcao">Professor da USP que acompanha o desenvolvimento acadêmico e institucional da organização.</div>
+        </div>
+    </div>
+</section>
+
+<!-- EX-MEMBROS -->
+<section class="membros-section">
+    <div class="membros-section-head">
+        <h2>Ex-Membros</h2>
+        <span>Quem já fez parte da nossa história</span>
+    </div>
+    <div class="ex-membros-list">
+        <div class="ex-membro-card">
+            <div class="membro-nome">Nome do Ex-Membro</div>
+            <div class="membro-cargo">Diretor de Projetos</div>
+            <div class="membro-ano">Gestão 2024</div>
+        </div>
+        <div class="ex-membro-card">
+            <div class="membro-nome">Nome do Ex-Membro</div>
+            <div class="membro-cargo">Coordenador de Marketing</div>
+            <div class="membro-ano">Gestão 2024</div>
+        </div>
+        <div class="ex-membro-card">
+            <div class="membro-nome">Nome do Ex-Membro</div>
+            <div class="membro-cargo">Coordenador de Eventos</div>
+            <div class="membro-ano">Gestão 2024</div>
+        </div>
+        <div class="ex-membro-card">
+            <div class="membro-nome">Nome do Ex-Membro</div>
+            <div class="membro-cargo">Trainee de Projetos</div>
+            <div class="membro-ano">Gestão 2024</div>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <h2>Quer fazer parte da MODA USP?</h2>
+    <p>Cadastre-se no nosso Banco de Talentos e fique no radar para futuras oportunidades.</p>
+    <a href="contato.html" class="btn-minimal" style="color: #fff;">Candidatar-se →</a>
+</section>
+
+<footer>
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <h3>MODA USP.</h3>
+            <p>Formação, conexão e inovação para transformar o futuro da moda desde 2024.</p>
+            <div class="footer-social">
+                <a href="https://instagram.com/modausp" target="_blank">Instagram</a>
+                <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h4><a href="sobre.html">Sobre</a></h4>
+            <ul>
+                <li><a href="sobre.html">A Organização</a></li>
+                <li><a href="sobre.html">Nossa História</a></li>
+                <li><a href="sobre.html">Valores</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4><a href="projetos.html">Projetos</a></h4>
+            <ul>
+                <li><a href="projetos.html#economoda">Economoda</a></li>
+                <li><a href="projetos.html#link-fashion">Link Fashion</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4><a href="membros.html">Membros</a></h4>
+            <ul>
+                <li><a href="membros.html">Presidência</a></li>
+                <li><a href="membros.html">Diretoria</a></li>
+                <li><a href="membros.html">Trainees</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4><a href="contato.html">Contato</a></h4>
+            <ul>
+                <li><a href="contato.html">Banco de Talentos</a></li>
+                <li><a href="mailto:modausp@gmail.com">modausp@gmail.com</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2024-2026 MODA USP. Todos os direitos reservados.</span>
+        <span>FEARP-USP · Ribeirão Preto · Universidade de São Paulo</span>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
