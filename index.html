@@ -76,10 +76,13 @@
             align-items: baseline;
             border-top: 2px solid #000;
             padding-top: 14px; margin-bottom: 40px;
+            gap: 20px;
+            flex-wrap: wrap;
         }
         .dz-section-head h2 {
             font-weight: 800; font-size: 1.5rem;
             letter-spacing: -0.02em; text-transform: uppercase;
+            display: flex; align-items: center; gap: 14px;
         }
         .dz-section-head h2 a:hover { text-decoration: underline; opacity: 1; }
         .dz-more {
@@ -116,7 +119,7 @@
         }
         .dz-card:hover h3 { text-decoration: underline; opacity: 1; }
 
-        /* Carrossel (Dazed League) */
+        /* === CARROSSEL (Dazed League) === */
         .dz-strip { background: #000; color: #fff; padding: 72px 0; }
         .dz-strip-inner { max-width: 1400px; margin: 0 auto; padding: 0 40px; }
         .dz-strip-head {
@@ -157,7 +160,7 @@
         }
         .dz-strip-cta:hover { background: #fff; color: #000; opacity: 1; }
 
-        /* A Organização (The Magazine style) */
+        /* === A ORGANIZAÇÃO (The Magazine) === */
         .dz-mag {
             display: grid;
             grid-template-columns: 1fr 2fr;
@@ -179,7 +182,7 @@
             gap: 32px 24px;
         }
 
-        /* Em Alta (Trending) */
+        /* === EM ALTA (Trending) === */
         .dz-trending ol { list-style: none; counter-reset: trend; }
         .dz-trending li {
             counter-increment: trend;
@@ -209,6 +212,84 @@
             color: #888;
         }
 
+        /* ==========================================
+           FEED DO INSTAGRAM — Seção Últimas
+           ========================================== */
+        .insta-handle {
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            color: #888;
+            text-transform: uppercase;
+        }
+        .insta-handle a {
+            color: #000;
+            font-weight: 700;
+            border-bottom: 1px solid #000;
+            padding-bottom: 2px;
+            transition: all 0.25s ease;
+        }
+        .insta-handle a:hover {
+            background: #000;
+            color: #fff;
+            opacity: 1;
+        }
+        
+        .insta-feed {
+            position: relative;
+            overflow: hidden;
+            background: #fafafa;
+            border: 1px solid #000;
+        }
+        
+        /* Widget LightWidget herda o tratamento P&B do site */
+        .insta-feed iframe.lightwidget-widget {
+            width: 100% !important;
+            border: none !important;
+            display: block;
+            filter: grayscale(100%) contrast(1.1);
+            transition: filter 0.6s ease;
+            min-height: 420px;
+        }
+        
+        /* Ao passar o mouse, o feed "ganha vida" em cor */
+        .insta-feed:hover iframe.lightwidget-widget {
+            filter: grayscale(0%) contrast(1);
+        }
+        
+        /* Footer visual da seção */
+        .insta-footer {
+            margin-top: 24px;
+            display: flex;
+            justify-content: center;
+        }
+        .insta-footer a {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 32px;
+            border: 1px solid #000;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            transition: all 0.25s ease;
+        }
+        .insta-footer a:hover {
+            background: #000;
+            color: #fff;
+            opacity: 1;
+        }
+        .insta-footer a::before {
+            content: '';
+            width: 16px; height: 16px;
+            background: #000;
+            border-radius: 4px;
+            transition: background 0.25s ease;
+        }
+        .insta-footer a:hover::before { background: #fff; }
+
+        /* === RESPONSIVE === */
         @media (max-width: 1024px) {
             .dz-grid { grid-template-columns: repeat(2, 1fr); }
             .dz-mag { grid-template-columns: 1fr; gap: 40px; }
@@ -222,6 +303,8 @@
             .dz-strip-inner { padding: 0 20px; }
             .dz-trending a { gap: 16px; }
             .dz-trending .t-cat { display: none; }
+            .dz-section-head { flex-direction: column; align-items: flex-start; }
+            .insta-feed iframe.lightwidget-widget { min-height: 520px; }
         }
     </style>
 </head>
@@ -276,53 +359,26 @@
     <p>Histórias imperdíveis direto na sua caixa de entrada, toda semana.</p>
 </section>
 
-<!-- ÚLTIMAS -->
+<!-- ==================================================
+     ÚLTIMAS · FEED DO INSTAGRAM (ATUALIZADO)
+     ================================================== -->
 <section class="dz-section" id="ultimas">
     <div class="dz-section-head">
-        <h2>Últimas</h2>
-        <a href="conteudos.html" class="dz-more">Ver tudo →</a>
+        <h2>
+            Últimas 
+            <span class="insta-handle">· <a href="https://instagram.com/modausp" target="_blank" rel="noopener">@modausp</a></span>
+        </h2>
+        <a href="https://instagram.com/modausp" target="_blank" rel="noopener" class="dz-more">Seguir no Instagram →</a>
     </div>
-    <div class="dz-grid">
-        <a href="projetos.html#link-fashion" class="dz-card">
-            <div class="dz-thumb"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" alt="Link Fashion" loading="lazy"></div>
-            <div class="dz-cat">Projetos</div>
-            <h3>Link Fashion abre laboratórios de branding, finanças e ESG</h3>
-        </a>
-        <a href="eventos.html" class="dz-card">
-            <div class="dz-thumb"><img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80" alt="Evento" loading="lazy"></div>
-            <div class="dz-cat">Eventos</div>
-            <h3>Fashion Business em Debate: em breve, na FEARP-USP</h3>
-        </a>
-        <a href="conteudos.html" class="dz-card">
-            <div class="dz-thumb"><img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80" alt="Mercado" loading="lazy"></div>
-            <div class="dz-cat">Mercado</div>
-            <h3>Novas perspectivas para o mercado da moda</h3>
-        </a>
-        <a href="sobre.html" class="dz-card">
-            <div class="dz-thumb"><img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=80" alt="Organização" loading="lazy"></div>
-            <div class="dz-cat">Institucional</div>
-            <h3>MODA USP: a primeira organização de fashion business da USP-RP</h3>
-        </a>
-        <a href="conteudos.html" class="dz-card">
-            <div class="dz-thumb"><img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80" alt="Comportamento" loading="lazy"></div>
-            <div class="dz-cat">Comportamento</div>
-            <h3>Moda, identidade e comportamento</h3>
-        </a>
-        <a href="conteudos.html" class="dz-card">
-            <div class="dz-thumb"><img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=800&q=80" alt="Entrevista" loading="lazy"></div>
-            <div class="dz-cat">Entrevista</div>
-            <h3>Conversas com profissionais do setor</h3>
-        </a>
-        <a href="contato.html" class="dz-card">
-            <div class="dz-thumb"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="Banco de talentos" loading="lazy"></div>
-            <div class="dz-cat">Banco de Talentos</div>
-            <h3>Inscrições abertas: entre para o radar de oportunidades</h3>
-        </a>
-        <a href="sobre.html" class="dz-card">
-            <div class="dz-thumb"><img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=800&q=80" alt="Valores" loading="lazy"></div>
-            <div class="dz-cat">Valores</div>
-            <h3>Inovação, sustentabilidade, colaboração e diversidade</h3>
-        </a>
+
+    <div class="insta-feed">
+        <!-- LightWidget WIDGET -->
+        <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+        <iframe src="//lightwidget.com/widgets/076cb0ef476c5a2989548f05bbbcfa49.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+    </div>
+
+    <div class="insta-footer">
+        <a href="https://instagram.com/modausp" target="_blank" rel="noopener">Ver tudo no Instagram →</a>
     </div>
 </section>
 
@@ -555,6 +611,7 @@
 
 <script src="script.js"></script>
 <script>
+    // Carrossel Economoda
     const track = document.getElementById('strip-track');
     document.getElementById('strip-prev').addEventListener('click', () => {
         track.scrollBy({ left: -340, behavior: 'smooth' });
@@ -562,6 +619,8 @@
     document.getElementById('strip-next').addEventListener('click', () => {
         track.scrollBy({ left: 340, behavior: 'smooth' });
     });
+    
+    // Newsletter (feedback visual)
     document.querySelectorAll('.dz-drop-form').forEach(form => {
         form.addEventListener('submit', e => {
             e.preventDefault();
